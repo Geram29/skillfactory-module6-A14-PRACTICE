@@ -6,14 +6,14 @@ let fails = 0;
 let firstHitTime = 0;
 
 function round() {
-  // FIXME: надо бы убрать "target" прежде чем искать новый
+
   $(".game-field").removeClass('target');
   let divSelector = randomDivId();
   $(divSelector).addClass("target");
   $(divSelector).removeClass("miss");
-  // TODO: помечать target текущим номером
+
   $(".target").text(`${hits+1}`);
-  // FIXME: тут надо определять при первом клике firstHitTime
+ 
   if (hits === 1){firstHitTime = getTimestamp()}
   if (hits === maxHits) {
     endGame();
@@ -21,7 +21,7 @@ function round() {
 }
 
 function endGame() {
-  // FIXME: спрятать игровое поле сначала
+  
   $(".grid-wrapper").hide();
   let totalPlayedMillis = getTimestamp() - firstHitTime;
   let totalPlayedSeconds = Number(totalPlayedMillis / 1000).toPrecision(3);
@@ -41,9 +41,9 @@ function endGame() {
 }
 
 function handleClick(event) {
-  // FIXME: убирать текст со старых таргетов. Кажется есть .text?
+  
   $(".target").text("");
-  // TODO: как-то отмечать если мы промахнулись? См CSS класс .miss
+  
   if ($(event.target).hasClass("target")) {
     hits = hits + 1;
     $(".game-field").removeClass('miss');
@@ -56,7 +56,7 @@ function handleClick(event) {
   }
 
 function init() {
-  // TODO: заказчик просил отдельную кнопку, запускающую игру а не просто по загрузке
+  
   round();
 
   $(".game-field").click(handleClick);
