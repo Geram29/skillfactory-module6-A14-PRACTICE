@@ -19,12 +19,22 @@ h3 {
 	padding-bottom: 30px;
 }
 
-.grid-wrapper {
+/*.grid-wrapper {
 	display: grid;
 	margin: 30px 0 10px 100px;
 	grid-template-columns: repeat(6, minmax(50px, 150px));
 	grid-template-rows: repeat(6, 80px);
 	grid-gap: 3px;
+}*/
+
+.grid-wrapper {
+    display: grid;
+    margin: 30px 0 10px 100px;
+    grid-template-columns: repeat(6, 150px);
+    /*grid-template-rows: repeat(6, 10vh);*/
+    grid-template-rows: repeat(6, 80px);
+    grid-gap: 3px;
+    /*margin-bottom: 10px;*/
 }
 
 .game-field {
