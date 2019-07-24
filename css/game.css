@@ -24,6 +24,7 @@ h3 {
 	margin: 30px 0 10px 100px;
 	grid-template-columns: repeat(6, minmax(50px, 150px));
 	grid-template-rows: repeat(6, 80px);
+	grid-gap: 3px;
 }
 
 .game-field {
