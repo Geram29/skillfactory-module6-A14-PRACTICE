@@ -14,7 +14,7 @@ function round() {
 
   $(".target").text(`${hits+1}`);
  
-  if (hits === 1){firstHitTime = getTimestamp()}
+  // if (hits === 1){firstHitTime = getTimestamp()}
   if (hits === maxHits) {
     endGame();
   }
@@ -65,5 +65,6 @@ function init() {
   });
 }
 
-$(document).ready(init);
+// $(document).ready();
+$(document).ready();
 
